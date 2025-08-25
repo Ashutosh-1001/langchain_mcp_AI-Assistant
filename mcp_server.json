@@ -1,0 +1,67 @@
+{
+  "servers": [
+    {
+      "name": "playwright",
+      "command": ["npx", "@modelcontextprotocol/server-playwright"],
+      "args": ["--headless"],
+      "env": {}
+    },
+    {
+      "name": "airbnb",
+      "command": ["npx", "@modelcontextprotocol/server-airbnb"],
+      "args": ["--location", "San Francisco"],
+      "env": { "AIRBNB_API_KEY": "your_api_key_here" }
+    },
+    {
+      "name": "github",
+      "command": ["npx", "@modelcontextprotocol/server-github"],
+      "args": ["--repo", "openai/gpt"],
+      "env": { "GITHUB_TOKEN": "your_github_token_here" }
+    },
+    {
+      "name": "slack",
+      "command": ["npx", "@modelcontextprotocol/server-slack"],
+      "args": ["--workspace", "myteam"],
+      "env": { "SLACK_BOT_TOKEN": "xoxb-..." }
+    },
+    {
+      "name": "filesystem",
+      "command": ["npx", "@modelcontextprotocol/server-filesystem"],
+      "args": ["--root", "./data"],
+      "env": {}
+    },
+    {
+      "name": "weather",
+      "command": ["npx", "@modelcontextprotocol/server-weather"],
+      "args": ["--units", "metric"],
+      "env": { "WEATHER_API_KEY": "your_weather_api_key_here" }
+    },
+    {
+      "name": "calendar",
+      "command": ["npx", "@modelcontextprotocol/server-calendar"],
+      "args": ["--default-calendar", "work"],
+      "env": { "GOOGLE_CALENDAR_TOKEN": "your_google_token_here" }
+    },
+    {
+      "name": "notes",
+      "command": ["npx", "@modelcontextprotocol/server-notes"],
+      "args": [],
+      "env": {}
+    },
+    {
+      "name": "news",
+      "command": ["npx", "@modelcontextprotocol/server-news"],
+      "args": ["--lang", "en", "--category", "technology"],
+      "env": { "NEWS_API_KEY": "your_news_api_key_here" }
+    },
+    {
+      "name": "email",
+      "command": ["npx", "@modelcontextprotocol/server-email"],
+      "args": ["--provider", "gmail"],
+      "env": {
+        "EMAIL_USER": "user@example.com",
+        "EMAIL_PASS": "your_password"
+      }
+    }
+  ]
+}
